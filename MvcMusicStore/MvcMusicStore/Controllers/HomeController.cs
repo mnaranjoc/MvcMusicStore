@@ -8,11 +8,15 @@ namespace MvcMusicStore.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("")]
+        [Route("home")]
+        [Route("home/index")]
         public ActionResult Index()
         {
             return View();
         }
 
+        [Route("home/about")]
         public ActionResult About()
         {
             ViewBag.Message = "I like cake!";
@@ -20,6 +24,7 @@ namespace MvcMusicStore.Controllers
             return View();
         }
 
+        [Route("home/contact")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
